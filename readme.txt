@@ -22,6 +22,7 @@ Some one with development knowledge can edit the theme by using the SASS (.scss)
 * Cross Browser Compatibility
 * Responsive Drop Down Menu
 * Threaded Comments
+* Fluid Youtube & Vimeo Videos (no plugin req'd)
 
 /*========= Credits =========*/
 
@@ -37,6 +38,9 @@ FluidVids - http://opensource.org/licenses/MIT
 
 
 /*========= Changelog =========*/
+
+= 1.0.2 - 07.02.2014
+* Updated Readme.txt & styles.css descriptions.
 
 = 1.0.1 - 28.01.2014
 * Updated Screenshot and Readme.txt
