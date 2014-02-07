@@ -39,6 +39,9 @@ FluidVids - http://opensource.org/licenses/MIT
 
 /*========= Changelog =========*/
 
+= 1.0.5 - 07.02.2014
+* Fixed jquery issue.
+
 = 1.0.4 - 07.02.2014
 * Updated Readme.txt & styles.css descriptions.
 

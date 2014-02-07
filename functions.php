@@ -19,6 +19,7 @@
 \*------------------------------------*/
 
 // Load any external files you have here
+require_once(TEMPLATEPATH . '/assets/includes/theme-options.php');
 
 /*------------------------------------*\
 	Add Theme Support
@@ -101,10 +102,10 @@ function weavr_scripts() {
 
 	if (!is_admin()) {
 
-		wp_enqueue_script( 'jQuery' );
+		wp_enqueue_script( 'jquery' );
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/vendor/conditionizr.js', array(), '4.1.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+    wp_register_script('conditionizr', get_template_directory_uri() . '/assets/js/vendor/conditionizr.js', array(), '4.1.0'); // Conditionizr
+    wp_enqueue_script('conditionizr'); // Enqueue it!
 
 		wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.6.2.min.js', false, '2.7.0', false );
 		wp_enqueue_script( 'modernizr' );
