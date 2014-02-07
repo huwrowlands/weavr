@@ -1,0 +1,178 @@
+/* =============================================================================
+   WordPress Core CSS Styles
+   ========================================================================== */
+   
+.alignnone,
+a img.alignnone {
+	margin:1em 20px 20px 0;
+}
+
+.aligncenter,
+a img.aligncenter {
+	text-align: center;
+	display:block;
+	margin:1em auto 1em auto;
+}
+
+.alignright,
+a img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;	
+}
+
+.alignleft,
+a img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;	
+}
+
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+
+.wp-caption p.wp-caption-text,
+.gallery-caption {
+	font-size:0.6875em;
+	line-height:1.0625em;
+	margin:0;
+	padding:0 4px 5px;
+}
+
+.sticky {
+	background: #f9f9f9;
+}
+
+/* =Post WP Comment Styling
+-----------------------------------------------------------------------------*/
+
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+.commentlist .vcard {}
+
+.commentlist .author-avatar {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.commentlist .vcard cite.fn {
+	word-wrap: break-word;
+}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {
+	@include border-radius(4px);
+}
+.commentlist .vcard img.avatar {
+	@include border-radius(4px);
+}
+.commentlist .vcard cite.fn a.url {}
+
+.commentlist .comment-meta {
+	position: relative;
+	left: 60px;
+} 
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
+
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .children {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {}
+.commentlist .comment-author-admin {}
+
+.commentlist {
+	position: relative;
+	margin-left: 0;
+}
+
+.commentlist li.comment {
+	padding: 10px;
+	list-style-type: none;
+	position: relative;
+}
+
+.commentlist .comment-body {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.commentlist li.comment .comment-text {
+	position: relative;
+	left: 60px;
+}
+
+.commentlist li p {
+	margin-bottom: 0.5em;
+}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+/*.commentlist li ul.children li.depth-{id} {}*/
+.commentlist li ul.children li.bypostauthor {
+	background: #f9f9f9;
+}
+.commentlist li ul.children li.comment-author-admin {}
+
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
+
+aside.post-meta {
+	background: #f1f1f1;
+	padding: 5px;
+	border-radius: 4px;
+	margin-bottom: $gutter/2;
+	span:first-child {
+		margin-left: 10px;
+		color: #666;
+	}
+}
+
+/* =Basic WP Sidebar Widget Styling
+-----------------------------------------------------------------------------*/
+
+.widget {
+	list-style-type: none;
+	margin-left: 0;
+	margin-bottom: 20px;
+	word-wrap: break-word;
+}

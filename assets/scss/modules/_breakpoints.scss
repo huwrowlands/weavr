@@ -1,0 +1,24 @@
+/* Breakpoints - Amend on a per project basis*/
+
+@mixin breakpoint($point) {
+
+  @if $point == bp6 {
+    @media screen and (min-width: 1280px) { @content; }
+  }
+  @else if $point == bp5 {
+    @media screen and (min-width: 1140px) { @content; }
+  }
+  @else if $point == bp4 {
+    @media screen and (min-width: 1024px) { @content; }
+  }
+  @else if $point == bp3 {
+    @media screen and (min-width: 768px) { @content; }
+  }
+  @else if $point == bp2 {
+    @media screen and (min-width: 480px)  { @content; }
+  }
+  @else if $point == bp1 {
+    @media screen and (min-width: 320px)  { @content; }
+  }
+  
+}

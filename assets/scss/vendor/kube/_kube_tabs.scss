@@ -1,0 +1,102 @@
+/* Tabs */
+.nav-tabs {
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 1.65em;
+}
+.nav-tabs:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.nav-tabs ul {
+  list-style: none;
+  margin: 0;
+}
+.nav-tabs ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.nav-tabs ul li {
+  float: left;
+  margin-right: 2px;
+}
+.nav-tabs ul li a,
+.nav-tabs ul li span {
+  display: block;
+  line-height: 1;
+  padding: 8px 12px 9px 12px;
+}
+.nav-tabs ul li a {
+  color: #999999;
+  text-decoration: none;
+}
+.nav-tabs ul li a:focus,
+.nav-tabs ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.nav-tabs ul li .active,
+.nav-tabs ul li span {
+  color: #000000;
+  background: #fff;
+  margin-top: -2px;
+  position: relative;
+  padding: 8px 11px 9px 11px;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  bottom: -1px;
+}
+.nav-tabs ul li .active {
+  cursor: default;
+}
+/* Vertical tabs */
+.nav-tabs-v {
+  border: none;
+  border-right: 1px solid #e3e3e3;
+}
+.nav-tabs-v ul li {
+  float: none;
+}
+.nav-tabs-v ul li span {
+  margin-top: 0;
+  bottom: 0;
+  margin-right: -3px;
+  border: 1px solid #ddd;
+  border-right: 1px solid #fff;
+}
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .nav-tabs ul,
+  .nav-pills,
+  .nav-pills ul {
+    float: none;
+  }
+  .nav-tabs ul li {
+    float: none;
+    margin-right: 0;
+  }
+  .nav-tabs ul li a,
+  .nav-tabs ul li span,
+  .nav-tabs ul li .active {
+    margin-top: 0;
+    bottom: 0;
+    padding: 8px 12px 9px 12px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+  }
+  .nav-tabs-v {
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+  }
+  .nav-tabs-v ul li span {
+    margin-top: 0;
+    bottom: 0;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,36 @@
+/* =============================================================================
+   Custom Login Screen
+   ========================================================================== */
+/* line 5, ../scss/login.scss */
+.login h1 a {
+  background: url("../img/weaver_logo.png") no-repeat top center;
+  /* make sure to replace this! */
+  width: 300px;
+  height: 145px;
+  text-indent: -9999px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  display: block; }
+
+/*body.login form {
+	margin-left: 8px;
+	padding: 26px 24px 46px;
+	font-weight: normal;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+
+body.login form .input {
+	font-family: $sans-serif;
+	font-weight: 200;
+	font-size: 24px;
+	width: 97%;
+	padding: 3px;
+	margin-top: 2px;
+	margin-right: 6px;
+	margin-bottom: 16px;
+	border: 1px solid #ccc;
+	background: #FFF;
+	outline: none;
+}*/
+/* login button*/

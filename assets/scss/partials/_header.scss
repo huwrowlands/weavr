@@ -1,0 +1,58 @@
+/* =============================================================================
+   HEADER
+   ========================================================================== */
+   
+#masthead {
+	margin-bottom: $gutter;
+	position: relative;
+	height: 300px;
+	@include breakpoint('bp3') {
+		max-height: 300px;
+		overflow: hidden;
+	}
+	
+	.site-title {
+		text-align: center;
+		z-index: 100;
+		padding-top: 2em;
+		@include breakpoint('bp3') {
+			padding-top: 3em;
+		}
+		margin-bottom: 1.5em;
+		@include text-shadow(rgba(#333, 0.4) 1px 1px 0);
+		font-family: $headingsFontFamily;
+		a {
+			text-decoration: none;
+			color: #fff;
+			@include font-size(4.0);
+		}
+	}
+	
+	.tagline {
+		text-align: center;
+		color: #fff;
+		@include font-size(2.0);
+		font-weight: normal;
+		margin-bottom: 3em;
+		@include text-shadow(rgba(#333, 0.4) 1px 1px 0);
+		font-family: $headingsFontFamily;
+		z-index: 100;
+	}
+	
+	.custom-header {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 100%;
+		max-height: 300px;
+		height: 300px;
+		z-index: -1;
+		img {
+			width: 100%;
+			height: 300px;
+		}
+	}
+}

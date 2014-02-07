@@ -1,0 +1,22 @@
+/* =============================================================================
+   Bits / Basic Settings, Mixins, Variables etc
+   ========================================================================== */
+   
+// Here you can set the basics such as Mixins and Breakpoints.
+  
+$gutter: 20px;
+
+/* Colours */
+
+$colorBody: #333;
+$colorHeadings: #222;
+$colorSubHeadings: #222;
+$colorLink: #369;
+$colorLinkHover: #c72020;
+
+$max-width: 960px; //Define site maximum width here.
+
+/* Fonts */
+
+$baseFontFamily: 'PT Sans', Arial, "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+$headingsFontFamily: 'PT Sans', Arial, "Helvetica Neue", Helvetica, Tahoma, sans-serif;

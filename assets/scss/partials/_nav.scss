@@ -1,0 +1,257 @@
+/* =============================================================================
+   Flaunt - Used to Responsive Navigation
+   
+   Adapted from Todd Mott's original code: http://toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal/
+   ========================================================================== */
+   
+/* Theme Specific Colours varibles */
+
+$fl_bg_normal_state: #333;
+$fl_bg_hover_state: #404040;
+
+$fl_submenu_bg_normal_state: #333;
+$fl_submenu_bg_hover_state: #404040;
+
+$fl_link_normal_state: #fff;
+$fl_link_hover_state: #000;
+
+$fl_border_1: 1px solid #404040;
+$fl_border_2: 1px solid #333;
+   
+/* Mobile specific navigation */
+
+#main-navigation {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+#secondary-navigation {
+	position: relative;
+	z-index: 100;
+	padding: 0 $gutter;
+	z-index: 10;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		border: 1px solid $fl_border_1;
+		li {			
+			a {
+				text-decoration: none;
+				padding: 10px 20px;
+				border: $fl_border_1;
+				background: $fl_bg_normal_state;
+				display: block;
+				width: 100%;
+				border-bottom: 0;
+				color: #fff;
+				&:hover, &:focus {
+					background: $fl_bg_hover_state;
+				}
+				@include breakpoint('bp2') {
+					float: left;
+					width: auto;
+				}
+			}
+			&:last-child a {
+				border-bottom: $fl_border_1;
+				@include breakpoint('bp2') {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	.sub-menu {
+		display: none;
+	}
+}
+	
+.nav-mobile {
+	display: none; /* Hide from browsers that don't support media queries */
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: transparent url("../img/icons/nav.svg") no-repeat center center;
+	background-size: 18px;
+	height: 50px;
+	width: 50px;
+}
+
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav-click {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	border-left: $fl_border_2;
+	height: 53px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.nav-click i {
+	display: block;
+	height: 48px;
+	width: 48px;
+	background: url("../img/icons/drop.svg") no-repeat center center;
+	background-size: 20px;
+}
+
+.nav-click:hover {
+	background-color: $fl_submenu_bg_hover_state;
+}
+
+.nav-rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+@media only screen and (max-width: 767px) {
+	.nav-mobile {
+		display: block;
+	}
+	.nav {
+		width: 100%;
+		padding: 50px 0 0;
+	}
+	.nav ul {
+		display: none;
+	}
+	.nav ul li {
+		width: 100%;
+		float: none;
+	}
+	.nav ul li > a {
+		padding: 15px;
+	}
+	.nav-click {
+		display: block;
+	}
+	.nav-mobile-open {
+		border-radius: 5px 5px 0 0;
+		-webkit-border-radius: 5px 5px 0 0;
+		-moz-border-radius: 5px 5px 0 0;
+	}
+	.nav ul li:hover .nav .sub-menu,
+	.nav ul li:hover .nav .children {
+		display: none;
+	}
+	.nav .sub-menu,
+	.nav .children {
+		position: static;
+		width: 100%;
+	}
+	.nav .sub-menu li,
+	.nav .children li {
+		width: 100%;
+	}
+	.nav .sub-menu .sub-menu,
+	.nav .sub-menu .children {
+		position: static;
+		top: 0;
+		left: 0;
+	}
+}
+
+.nav {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: normal;
+}
+	
+.nav ul {
+	text-align: left;
+	list-style-type: none;
+	margin-left: 0;
+}		
+
+.nav ul li {
+	float: left;
+	*display:inline;
+	zoom: 1;
+	position: relative;
+}	
+		
+.nav ul li a {
+	display: block;
+	color: $fl_link_normal_state;
+	padding: 15px 20px;
+	background: $fl_bg_normal_state;
+	border-bottom: $fl_border_1;
+	text-decoration: none;
+}
+
+.nav ul li > a:hover {
+	background:$fl_bg_hover_state;
+}
+
+.nav ul li:hover > .sub-menu,
+.nav ul li:hover > .children {
+	display: block;
+}
+
+/* Navigation Sub Menu (sub-menu & children) */
+
+.nav .sub-menu,
+.nav .children {
+	display: none;
+	position: absolute;
+	left: 0;
+	z-index: 999;
+}
+
+.nav .sub-menu li a,
+.nav .children li a {
+	background: $fl_submenu_bg_normal_state;
+	border-bottom: $fl_border_1;
+	display: block;
+	padding: 15px;	
+}
+
+.nav .sub-menu a:hover,
+.nav .children a:hover {
+	background: $fl_submenu_bg_hover_state;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.nav {
+		background: #333;
+		width: 100%;
+		border-bottom: $fl_border_1;
+		margin-bottom: 3em;
+		ul {
+			max-width: 960px;
+			margin: 0 auto;
+			li {
+				a {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.nav .sub-menu,
+	.nav .sub-menu li,
+	.nav .children,
+	.nav .children li {
+		width: 200px;
+		a {
+			border-bottom: $fl_border_1;
+		}
+	}	
+
+	.nav .sub-menu .sub-menu,
+	.nav .children .children {
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+
+}

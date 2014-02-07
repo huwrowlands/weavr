@@ -1,0 +1,171 @@
+/* =============================================================================
+   Flaunt - Used to Responsive Navigation
+   
+   Adapted from Todd Mott's original code: http://toddmotto.com/flaunt-js-for-stylish-responsive-navigations-with-nested-click-to-reveal/
+   ========================================================================== */
+/* Theme Specific Colours varibles */
+/* Mobile specific navigation */
+/* line 23, ../../scss/partials/_nav.scss */
+.nav-mobile {
+  display: none;
+  /* Hide from browsers that don't support media queries */
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #333333 url("../img/icons/nav.svg") no-repeat center center;
+  background-size: 18px;
+  height: 50px;
+  width: 50px; }
+
+/* Mobile navigation, clickable area for revealing <ul> */
+/* line 36, ../../scss/partials/_nav.scss */
+.nav-click {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  border-left: 1px solid #333333;
+  height: 53px;
+  width: 50px;
+  cursor: pointer; }
+
+/* line 47, ../../scss/partials/_nav.scss */
+.nav-click i {
+  display: block;
+  height: 48px;
+  width: 48px;
+  background: url("../img/icons/drop.svg") no-repeat center center;
+  background-size: 20px; }
+
+/* line 55, ../../scss/partials/_nav.scss */
+.nav-click:hover {
+  background-color: #404040; }
+
+/* line 59, ../../scss/partials/_nav.scss */
+.nav-rotate {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+@media only screen and (max-width: 767px) {
+  /* line 68, ../../scss/partials/_nav.scss */
+  .nav-mobile {
+    display: block; }
+
+  /* line 71, ../../scss/partials/_nav.scss */
+  .nav {
+    width: 100%;
+    padding: 50px 0 0; }
+
+  /* line 75, ../../scss/partials/_nav.scss */
+  .nav ul {
+    display: none; }
+
+  /* line 78, ../../scss/partials/_nav.scss */
+  .nav ul li {
+    width: 100%;
+    float: none; }
+
+  /* line 82, ../../scss/partials/_nav.scss */
+  .nav ul li > a {
+    padding: 15px; }
+
+  /* line 85, ../../scss/partials/_nav.scss */
+  .nav-click {
+    display: block; }
+
+  /* line 88, ../../scss/partials/_nav.scss */
+  .nav-mobile-open {
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0; }
+
+  /* line 93, ../../scss/partials/_nav.scss */
+  .nav ul li:hover .nav .sub-menu {
+    display: none; }
+
+  /* line 96, ../../scss/partials/_nav.scss */
+  .nav .sub-menu {
+    position: static;
+    width: 100%; }
+
+  /* line 100, ../../scss/partials/_nav.scss */
+  .nav .sub-menu li {
+    width: 100%; }
+
+  /* line 103, ../../scss/partials/_nav.scss */
+  .nav .sub-menu .sub-menu {
+    position: static;
+    top: 0;
+    left: 0; } }
+/* line 110, ../../scss/partials/_nav.scss */
+.nav {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal; }
+
+/* line 118, ../../scss/partials/_nav.scss */
+.nav ul {
+  text-align: left;
+  list-style-type: none;
+  margin-left: 0; }
+
+/* line 124, ../../scss/partials/_nav.scss */
+.nav ul li {
+  float: left;
+  *display: inline;
+  zoom: 1;
+  position: relative; }
+
+/* line 131, ../../scss/partials/_nav.scss */
+.nav ul li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  background: #333333;
+  border-bottom: 1px solid #404040;
+  text-decoration: none; }
+
+/* line 140, ../../scss/partials/_nav.scss */
+.nav ul li > a:hover {
+  background: #404040; }
+
+/* line 144, ../../scss/partials/_nav.scss */
+.nav ul li:hover > .sub-menu {
+  display: block; }
+
+/* Navigation Sub Menu (sub-menu) */
+/* line 150, ../../scss/partials/_nav.scss */
+.nav .sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 999; }
+
+/* line 157, ../../scss/partials/_nav.scss */
+.nav .sub-menu li a {
+  background: #333333;
+  border-bottom: 1px solid #404040;
+  display: block;
+  padding: 15px; }
+
+/* line 164, ../../scss/partials/_nav.scss */
+.nav .sub-menu a:hover {
+  background: #404040; }
+
+@media only screen and (min-width: 768px) {
+  /* line 171, ../../scss/partials/_nav.scss */
+  .nav .sub-menu,
+  .nav .sub-menu li {
+    width: 200px; }
+
+  /* line 175, ../../scss/partials/_nav.scss */
+  .nav .sub-menu .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%; } }

@@ -1,0 +1,294 @@
+/* =Typography
+-----------------------------------------------------------------------------*/
+
+//SASS Mixin for REM font sizes with pixel fallback.
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+body {
+  background: #ffffff;
+  color: #333333;
+  font-size: 0.875em;
+  line-height: 1.65em;
+  font-family: 'PT Sans', Arial, "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+}
+a {
+  color: #336699;
+}
+a:focus,
+a:hover {
+  color: #ef6465;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222222;
+  font-family: 'PT Sans', Arial, "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2.142em;
+  line-height: 1.1333em;
+  margin-bottom: .2666em;
+}
+h2 {
+  font-size: 1.714em;
+  line-height: 1.1666em;
+  margin-bottom: .4555em;
+}
+h3 {
+  font-size: 1.429em;
+  line-height: 1.4em;
+  margin-bottom: .4em;
+}
+h4 {
+  font-size: 1.143em;
+  line-height: 1.65em;
+  margin-bottom: .4555em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.65em;
+  margin-bottom: .5em;
+}
+h6 {
+  font-size: 0.857em;
+  line-height: 1.5em;
+  margin-bottom: .4555em;
+  text-transform: uppercase;
+}
+hgroup h1,
+hgroup h2,
+hgroup h3,
+hgroup h4,
+hgroup h5,
+hgroup h6 {
+  margin-bottom: 0;
+}
+hgroup {
+  margin-bottom: 0.6em;
+}
+.subheader {
+  font-weight: 300;
+  color: #888;
+}
+h1.subheader {
+  font-size: 1.357em;
+  line-height: 1.263em;
+}
+h2.subheader {
+  font-size: 1.214em;
+  line-height: 1.412em;
+}
+h3.subheader {
+  font-size: 1em;
+  line-height: 1.286em;
+}
+h4.subheader,
+h5.subheader {
+  font-size: 0.95em;
+  line-height: 1.385em;
+}
+h6.subheader {
+  font-size: 0.8em;
+  line-height: 1.364em;
+}
+p,
+ul,
+ol,
+dl,
+dd,
+dt,
+blockquote,
+td,
+th {
+  line-height: 1.65em;
+}
+ul,
+ol,
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin: 0 0 0 2em;
+}
+ol ol li {
+  list-style-type: lower-alpha;
+}
+ol ol ol li {
+  list-style-type: lower-roman;
+}
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre,
+table,
+form,
+fieldset,
+figure {
+  margin-bottom: 1.65em;
+}
+dl dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 1em;
+}
+blockquote {
+  margin-bottom: 1.65em;
+  position: relative;
+  color: #777777;
+  padding-left: 1.65em;
+  margin-left: 1.65em;
+  border-left: 1px solid #ddd;
+}
+blockquote small,
+cite {
+  color: #999999;
+  font-style: normal;
+}
+blockquote p {
+  margin-bottom: .5em;
+}
+small,
+blockquote cite {
+  font-size: 0.85em;
+  line-height: 1;
+}
+blockquote .pull-right,
+.units-row blockquote .pull-right {
+  float: none;
+  text-align: right;
+  display: block;
+}
+address {
+  font-style: italic;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+sub,
+sup {
+  font-size: 0.7em;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+figcaption {
+  font-size: 0.85em;
+  font-style: italic;
+}
+ins,
+mark {
+  background-color: #ffee55;
+  color: #000000;
+  text-decoration: none;
+}
+pre,
+code,
+kbd,
+samp {
+  font-size: 90%;
+  font-family: Consolas, Monaco, monospace, sans-serif;
+}
+pre {
+  font-size: 90%;
+  color: #444;
+  background: #f5f5f5;
+  padding: .85em;
+  overflow: auto;
+}
+code {
+  padding: 2px 3px;
+  display: inline-block;
+  line-height: 1;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+}
+kbd {
+  padding: 2px 6px 1px 6px;
+  line-height: 1;
+  display: inline-block;
+  border-radius: .3em;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #ffffff inset;
+  background-color: #fafafa;
+  border-color: #ccc #ccc white;
+  border-style: solid solid none;
+  border-width: 1px 1px medium;
+  color: #444;
+  font-weight: normal;
+  white-space: nowrap;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  font-size: .95em;
+}
+fieldset {
+  padding: 1.65em;
+  margin-bottom: 1.65em;
+  border: 1px solid #e3e3e3;
+}
+legend {
+  font-weight: bold;
+  padding: 0 1em;
+}
+.com {
+  color: #888;
+}
+.lit {
+  color: #195f91;
+}
+.pun,
+.opn,
+.clo {
+  color: #93a1a1;
+}
+.fun {
+  color: #005cb9;
+}
+.str,
+.atv {
+  color: #8A6343;
+}
+.kwd,
+.linenums,
+.tag {
+  color: #000;
+}
+.typ,
+.atn,
+.dec,
+.var {
+  color: #666;
+}
+.pln {
+  color: #5890AD;
+}

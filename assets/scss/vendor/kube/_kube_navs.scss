@@ -1,0 +1,163 @@
+/* =Navs
+-----------------------------------------------------------------------------*/
+/* Horizontal */
+.nav-h,
+.nav-g {
+  margin-bottom: 1.65em;
+}
+.nav-h:after,
+.nav-g:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.nav-h ul,
+.nav-g ul {
+  list-style: none;
+  margin: 0;
+}
+.nav-h ul:after,
+.nav-g ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.nav-h ul li,
+.nav-g ul li {
+  float: left;
+  margin-right: 1.5em;
+}
+.nav-h ul li a,
+.nav-h ul li span,
+.nav-g ul li a,
+.nav-g ul li span {
+  display: block;
+}
+.nav-h ul li a,
+.nav-g ul li a {
+  text-decoration: none;
+}
+.nav-h ul li a:hover,
+.nav-g ul li a:hover {
+  color: #ef6465;
+  text-decoration: underline;
+}
+.nav-h ul li span,
+.nav-g ul li span {
+  color: #999999;
+}
+/* Vertical */
+.nav-v {
+  margin-bottom: 1.65em;
+}
+.nav-v ul {
+  list-style: none;
+  margin: 0;
+}
+.nav-v ul li {
+  border-bottom: 1px solid #eee;
+}
+.nav-v ul li ul {
+  margin-left: 2em;
+  font-size: .95em;
+}
+.nav-v ul li ul li:last-child {
+  border-bottom: none;
+}
+.nav-v ul li ul li a,
+.nav-v ul li ul li span {
+  padding: 4px 0;
+}
+.nav-v ul li a,
+.nav-v ul li span {
+  display: block;
+  padding: 5px 0;
+}
+.nav-v ul li a {
+  text-decoration: none;
+}
+.nav-v ul li a:hover {
+  color: #ef6465;
+  text-decoration: underline;
+}
+.nav-v ul li span {
+  color: #999999;
+}
+/* Stacked */
+.nav-stacked ul {
+  border: 1px solid #eee;
+  border-bottom: 0;
+}
+.nav-stacked ul li a,
+.nav-stacked ul li span {
+  padding: 5px 10px;
+}
+.nav-stacked ul li a:hover {
+  background-color: #f5f5f5;
+}
+/* Stats */
+.nav-stats li {
+  position: relative;
+}
+.nav-stats li a,
+.nav-stats li span {
+  padding-right: 50px;
+}
+.nav-stats .label,
+.nav-stats .label-badge {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+}
+.nav-stats.nav-stacked .label,
+.nav-stats.nav-stacked .label-badge {
+  right: 4px;
+}
+.nav-stats .label.label-data,
+.nav-stacked .label-data {
+  margin-top: -6px;
+  right: 6px;
+}
+.nav-v h1,
+.nav-v h2,
+.nav-v h3,
+.nav-v h4,
+.nav-v h5,
+.nav-v h6 {
+  margin-top: 1.5em;
+  margin-bottom: 3px;
+}
+.nav-v h1:first-child,
+.nav-v h2:first-child,
+.nav-v h3:first-child,
+.nav-v h4:first-child,
+.nav-v h5:first-child,
+.nav-v h6:first-child {
+  margin-top: 0;
+}
+/* =Mobile (Portrait)
+-----------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  .nav-h,
+  .nav-h ul,
+  .nav-h ul li,
+  .nav-h,
+  .nav-g,
+  .nav-g ul,
+  .nav-g ul li,
+  .nav-g,
+  .nav-v ul,
+  .nav-v {
+    float: none;
+  }
+  .nav-h ul li,
+  .nav-g ul li {
+    margin: 0;
+    margin-bottom: 1px;
+  }
+}
