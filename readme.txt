@@ -39,7 +39,7 @@ FluidVids - http://opensource.org/licenses/MIT
 
 /*========= Changelog =========*/
 
-= 1.0.2 - 07.02.2014
+= 1.0.4 - 07.02.2014
 * Updated Readme.txt & styles.css descriptions.
 
 = 1.0.1 - 28.01.2014
