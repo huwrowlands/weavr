@@ -42,6 +42,7 @@ FluidVids - http://opensource.org/licenses/MIT
 = 1.0.6 - 08.02.2014
 * Updated & Fixed Navigation & header CSS.
 * Improved custom Header Image support.
+* Add Custom Logo Upload to Theme - Customize.
 
 = 1.0.5 - 07.02.2014
 * Fixed jquery issue.
