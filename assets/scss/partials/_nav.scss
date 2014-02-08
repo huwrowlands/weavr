@@ -21,9 +21,12 @@ $fl_border_2: 1px solid #333;
 /* Mobile specific navigation */
 
 #main-navigation {
-	position: fixed;
+	position: relative;
 	width: 100%;
 	z-index: 100;
+	@include breakpoint('bp2') {
+		position: fixed;
+	}
 }
 
 #secondary-navigation {
@@ -31,6 +34,7 @@ $fl_border_2: 1px solid #333;
 	z-index: 100;
 	padding: 0 $gutter;
 	z-index: 10;
+	display: block;
 	ul {
 		list-style-type: none;
 		margin: 0;

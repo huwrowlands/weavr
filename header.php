@@ -8,6 +8,10 @@
 		<title><?php wp_title(); ?></title>
 		
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
+		
+		<?php if (get_theme_mod('favicon_upload')) { ?>
+			<link href="<?php get_theme_mod('favicon_upload'); ?>" rel="shortcut icon">	
+		<?php } ?>
 			
    <?php wp_head(); ?>
 	</head>
@@ -31,12 +35,22 @@
 				</nav>
 						
 				<div class="units-row">
-				
+					
+					<?php if (get_theme_mod('custom_logo_upload')) { ?>
+					
+						<a href="<?php echo home_url(); ?>">
+							<img alt="<?php bloginfo('name'); ?>" class="site-logo" src="<?php echo get_theme_mod( 'custom_logo_upload' ); ?>" />
+						</a>
+						
+					<?php } else { ?>
+					
 					<h1 class="site-title">
 							<a href="<?php echo home_url(); ?>">
 								<?php bloginfo('name'); ?>
 							</a>	
-					</h1>
+					</h1>			
+								
+					<?php } ?>
 					
 					<h2 class="tagline">
 						<?php bloginfo('description'); ?>
@@ -45,14 +59,19 @@
 				</div>
 
 			<?php if ( get_header_image() ) { ?>			
-				<div class="custom-header">
-					<img src="<?php header_image(); ?>" class="header-image" alt="<?php bloginfo('name'); ?>" />
-				</div>			
+			<style>
+				#masthead {
+					background-image: url("<?php echo get_theme_mod( 'header_image' ); ?>");
+				}
+			</style>			
 			<?php } else { ?>
-				<div class="custom-header">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg" class="header-image" alt="<?php bloginfo('name'); ?>" />
-				</div>			
+			<style>
+				#masthead {
+					background-image: url("<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg");
+				}
+			</style>		
 			<?php } ?>	
+						
 						
 		</header>
 		

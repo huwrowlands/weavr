@@ -19,7 +19,7 @@
 \*------------------------------------*/
 
 // Load any external files you have here
-require_once(TEMPLATEPATH . '/assets/includes/theme-options.php');
+require_once(get_template_directory() . '/assets/includes/theme-options.php');
 
 /*------------------------------------*\
 	Add Theme Support
