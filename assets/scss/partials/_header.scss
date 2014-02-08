@@ -5,6 +5,8 @@
 #masthead {
 	margin-bottom: $gutter;
 	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
 	@include breakpoint('bp3') {
 		overflow: hidden;
 	}
