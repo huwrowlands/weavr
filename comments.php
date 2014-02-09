@@ -9,7 +9,7 @@
 	<?php if (have_comments()) : ?>
 	
 		<ul class="commentlist">
-			<?php wp_list_comments( array( 'callback'  =>  'canvas_comments_callback') ); ?>
+			<?php wp_list_comments( array( 'callback'  =>  'weavr_comments_callback') ); ?>
 		</ul>
 		
 	<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
