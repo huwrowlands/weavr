@@ -39,6 +39,9 @@ FluidVids - http://opensource.org/licenses/MIT
 
 /*========= Changelog =========*/
 
+= 1.0.7 - 09.02.2014
+* Fixed an issue with the comments template.
+
 = 1.0.6 - 08.02.2014
 * Updated & Fixed Navigation & header CSS.
 * Improved custom Header Image support.
