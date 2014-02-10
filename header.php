@@ -9,8 +9,8 @@
 		
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		
-		<?php if (get_theme_mod('favicon_upload')) { ?>
-			<link href="<?php get_theme_mod('favicon_upload'); ?>" rel="shortcut icon">	
+		<?php if (get_theme_mod('favicon')) { ?>
+			<link href="<?php echo get_theme_mod( 'favicon' ); ?>" rel="shortcut icon">
 		<?php } ?>
 			
    <?php wp_head(); ?>
