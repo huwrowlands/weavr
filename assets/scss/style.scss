@@ -12,6 +12,17 @@
 @import 'mixins/_setup.scss';
 
 //----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+//@import 'modules/_vars.scss';
+//@import 'modules/_clearfix.scss';
+//@import 'modules/_normalize.scss';
+//@import 'modules/_defaults.scss';
+@import 'modules/_breakpoints.scss';
+
+//----------------------------------*\
 // VENDOR
 //----------------------------------*/
 
@@ -37,17 +48,6 @@
 @import 'vendor/kube/kube_tables.scss';
 @import 'vendor/kube/kube_tabs.scss';
 @import 'vendor/kube/kube_typo.scss';
-
-//----------------------------------*\
-// CONFIG MODULES
-//----------------------------------*/
-
-// Config modules
-//@import 'modules/_vars.scss';
-//@import 'modules/_clearfix.scss';
-//@import 'modules/_normalize.scss';
-//@import 'modules/_defaults.scss';
-@import 'modules/_breakpoints.scss';
 
 //----------------------------------*\
 // PARTIALS

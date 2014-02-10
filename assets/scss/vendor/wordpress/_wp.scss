@@ -85,9 +85,12 @@ a img.alignleft {
 .commentlist .vcard {}
 
 .commentlist .author-avatar {
-	position: absolute;
-	top: 10px;
-	left: 10px;
+	position: relative;
+	@include breakpoint('bp3') {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
 }
 
 .commentlist .vcard cite.fn {
@@ -104,7 +107,13 @@ a img.alignleft {
 
 .commentlist .comment-meta {
 	position: relative;
-	left: 60px;
+	font-size: 1.4rem;
+	font-size: 14px;
+	@include breakpoint('bp3') {
+		left: 60px;
+		font-size: 1.6rem;
+		font-size: 16px;
+	}
 } 
 .commentlist .comment-meta a {}
 .commentlist .commentmetadata {}
@@ -136,7 +145,10 @@ a img.alignleft {
 
 .commentlist li.comment .comment-text {
 	position: relative;
-	left: 60px;
+	padding-left: 10px;
+	@include breakpoint('bp3') {
+		left: 60px;
+	}
 }
 
 .commentlist li p {

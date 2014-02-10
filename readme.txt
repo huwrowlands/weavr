@@ -42,6 +42,7 @@ FluidVids - http://opensource.org/licenses/MIT
 = 1.0.8 - 10.02.2014
 * Added Favicon uploader to customizer.
 * Added Custom Footer Text to customizer.
+* Adjusted mobile comments styling.
 
 = 1.0.7 - 09.02.2014
 * Fixed an issue with the comments template.
