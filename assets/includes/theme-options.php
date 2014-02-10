@@ -14,8 +14,8 @@ function weavr_customizer( $wp_customize) {
 	$wp_customize->add_section(
 		'custom_logo_upload',
 		array(
-			'title' => _('Custom Logo', 'weavr'),
-			'description' => _('Upload your custom logo', 'weavr'),
+			'title' => 'Custom Logo',
+			'description' => 'Upload your custom logo',
 			'priority' => '35',
 		)
 	);
@@ -23,8 +23,8 @@ function weavr_customizer( $wp_customize) {
 	$wp_customize->add_section(
 		'custom_footer_text',
 		array(
-			'title' => _('Custom Footer Text', 'weavr'),
-			'description' => _('Enter your custom footer text', 'weavr'),
+			'title' => 'Custom Footer Text',
+			'description' => 'Enter your custom footer text',
 			'priority' => '35'
 		)
 	);
@@ -32,8 +32,8 @@ function weavr_customizer( $wp_customize) {
 	$wp_customize->add_section(
 		'favicon',
 		array(
-			'title' => _('Favicon', 'weavr'),
-			'desctiption' => _('Upload your Favicon', 'weavr'),
+			'title' => 'Favicon',
+			'desctiption' => 'Upload your Favicon',
 			'priority' => '35'
 		)
 	);
@@ -55,7 +55,7 @@ function weavr_customizer( $wp_customize) {
 			$wp_customize,
 			'custom_logo',
 			array(
-				'label'=>_('Custom Logo', 'weavr'),
+				'label'=> 'Custom Logo',
 				'section'=>'custom_logo_upload',
 				'settings'=>'custom_logo_upload'
 			)
@@ -65,7 +65,7 @@ function weavr_customizer( $wp_customize) {
 	$wp_customize->add_control(
 		'custom_footer_text',
 		array(
-			'label' => _('Custom Footer Text', 'weavr'),
+			'label' => 'Custom Footer Text',
 			'section' => 'custom_footer_text',
 			'settings' => 'custom_footer_text'
 		)
@@ -76,7 +76,7 @@ function weavr_customizer( $wp_customize) {
 			$wp_customize,
 			'favicon',
 			array(
-				'label' => _('Favicon', 'weavr'),
+				'label' => 'Favicon',
 				'section' => 'favicon',
 				'settings' => 'favicon'
 			)
