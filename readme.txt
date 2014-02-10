@@ -1,7 +1,7 @@
 /*========= Weavr =========*/
 
 Theme Name: Weavr
-Version: 1.0.1
+Version: 1.0.8
 Tested upto: 3.8.1
 
 Author: Huw Rowlands
