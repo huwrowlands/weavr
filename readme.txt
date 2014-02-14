@@ -39,6 +39,9 @@ FluidVids - http://opensource.org/licenses/MIT
 
 /*========= Changelog =========*/
 
+= 1.0.9 - 13.02.2014
+* Added Custom CSS section to customizer.
+
 = 1.0.8 - 10.02.2014
 * Added Favicon uploader to customizer.
 * Added Custom Footer Text to customizer.

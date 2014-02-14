@@ -58,21 +58,11 @@
 					
 				</div>
 				
-
 				<?php if ( get_header_image() ) { ?>			
-				<style>
-					#masthead {
-						background-image: url("<?php echo get_theme_mod( 'header_image' ); ?>");
-					}
-				</style>			
+					<style>#masthead {background-image: url("<?php echo get_theme_mod( 'header_image' ); ?>");}</style>			
 				<?php } else { ?>
-				<style>
-					#masthead {
-						background-image: url("<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg");
-					}
-				</style>		
-				<?php } ?>	
-						
+					<style>#masthead {background-image: url("<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg");}</style>		
+				<?php } ?>					
 						
 		</header>
 		

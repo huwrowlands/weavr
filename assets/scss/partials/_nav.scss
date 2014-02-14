@@ -76,8 +76,11 @@ $fl_border_2: 1px solid #333;
 	position: absolute;
 	top: 0;
 	right: 0;
-	background: transparent url("../img/icons/nav.svg") no-repeat center center;
+	background: $fl_bg_normal_state url("../img/icons/nav.svg") no-repeat center center;
 	background-size: 18px;
+	border-radius: 4px;
+	margin-right: 4px;
+	margin-top: 4px;
 	height: 50px;
 	width: 50px;
 }

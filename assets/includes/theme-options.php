@@ -1,16 +1,39 @@
 <?php
 /**
-	THEME OPTIONS FOR THE CUSTOMIZER
+	THEME OPTIONS FOR THE THEME CUSTOMIZER
 **/
 
-/*****
+/*************************
 	CUSTOM LOGO
 	CUSTOM FAVICON
-*****/
+	CUSTOM FOOTER TEXT
+	CUSTOM CSS (TODO)
+	CUSTOM COLORS (TODO)
+	HOMEPAGE SLIDER (TODO)
+*************************/
 
 function weavr_customizer( $wp_customize) {
 
-	//Add Section/s
+	/**
+	 * Add textarea support to the theme customizer
+	 */
+	class Customize_Textarea_Control extends WP_Customize_Control {
+	    public $type = 'textarea';
+	 
+	    public function render_content() {
+	        ?>
+	            <label>
+	                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+	                <textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+	            </label>
+	        <?php
+	    }
+	}
+
+/*************************	
+* ADD SECTIONS
+*************************/
+
 	$wp_customize->add_section(
 		'custom_logo_upload',
 		array(
@@ -33,12 +56,24 @@ function weavr_customizer( $wp_customize) {
 		'favicon',
 		array(
 			'title' => 'Favicon',
-			'desctiption' => 'Upload your Favicon',
+			'description' => 'Upload your Favicon',
 			'priority' => '35'
 		)
 	);
-		
-	//Add Setting/s
+
+	$wp_customize->add_section(
+		'custom-css',
+		array(
+			'title' => 'Custom CSS',
+			'description' => 'Add your own CSS',
+			'priority' => '35'
+		)
+	);	
+	
+/*************************	
+* ADD SETTINGS
+*************************/
+
 	$wp_customize->add_setting('custom_logo_upload');
 	$wp_customize->add_setting(
 		'custom_footer_text',
@@ -48,8 +83,13 @@ function weavr_customizer( $wp_customize) {
 		)
 	);
 	$wp_customize->add_setting('favicon');
+	$wp_customize->add_setting('custom-css');
 	
-	//Add Control/s
+	
+/*************************	
+* ADD CONTROLS
+*************************/
+
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
 			$wp_customize,
@@ -83,12 +123,28 @@ function weavr_customizer( $wp_customize) {
 		)
 	);
 	
-	//Sanitize Callback/s
+	$wp_customize->add_control(
+		new Customize_Textarea_Control(
+			$wp_customize,
+			'custom-css',
+			array(
+				'label' => 'Custom CSS',
+				'section' => 'custom-css',
+				'settings' => 'custom-css'
+			)
+		)
+	);
+	
+/*************************	
+* SANATIZE CALLBACKS
+*************************/
+
 	function footer_sanitize_text($input) {
 		return wp_kses_post(force_balance_tags($input)); /*Allows certain HTML Tags*/
 	}
 		
 }
+
 add_action('customize_register', 'weavr_customizer');
 
 ?>

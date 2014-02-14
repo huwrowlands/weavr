@@ -380,6 +380,11 @@ function weavr_add_editor_styles() {
 }
 add_action( 'init', 'weavr_add_editor_styles' );
 
+function weavr_custom_style_settings() {
+	require get_template_directory() . '/assets/includes/custom-styles.php';
+}
+add_action('wp_head', 'weavr_custom_style_settings');
+
 
 //WooCommerce Theme Support
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
@@ -432,4 +437,5 @@ function weavr_wp_link_pages_args_prevnext_add($args)
  
     return $args;
 }
+
 ?>
