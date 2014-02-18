@@ -68,8 +68,8 @@ function weavr_customizer( $wp_customize) {
 			'description' => 'Add your own CSS',
 			'priority' => '35'
 		)
-	);	
-	
+	);		
+		
 /*************************	
 * ADD SETTINGS
 *************************/
@@ -134,7 +134,7 @@ function weavr_customizer( $wp_customize) {
 			)
 		)
 	);
-	
+		
 /*************************	
 * SANATIZE CALLBACKS
 *************************/

@@ -39,6 +39,9 @@ FluidVids - http://opensource.org/licenses/MIT
 
 /*========= Changelog =========*/
 
+= 1.1.0 - 18.02.2014
+* Updated Secondary Menu for mobile devices.
+
 = 1.0.9 - 13.02.2014
 * Added Custom CSS section to customizer.
 

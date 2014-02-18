@@ -8,4 +8,4 @@
 	http://www.opensource.org/licenses/mit-license.php
 
 	Flaunt JS, stylish responsive navigations with nested click to reveal.
-*/(function(e){e(function(){e(".nav").append(e('<div class="nav-mobile"></div>'));e(".nav ul li").has("ul").prepend('<span class="nav-click"><i class="nav-arrow"></i></span>');e(".nav-mobile").click(function(){e(".nav-list").toggle()});e(".nav-list").on("click",".nav-click",function(){e(this).siblings(".nav .sub-menu").toggle();e(this).children(".nav-arrow").toggleClass("nav-rotate")})})})(jQuery);
+*/(function(e){e(function(){e(".nav").append(e('<div class="nav-mobile"></div>'));e(".nav ul li").has("ul").prepend('<span class="nav-click"><i class="nav-arrow"></i></span>');e(".nav-mobile").click(function(){e(this).parent().children(".nav-list").toggle()});e(".nav-list").on("click",".nav-click",function(){e(this).siblings(".nav .sub-menu").toggle();e(this).children(".nav-arrow").toggleClass("nav-rotate")})})})(jQuery);

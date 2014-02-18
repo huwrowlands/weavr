@@ -57,18 +57,19 @@
 					</h2>		
 					
 				</div>
-				
-				<?php if ( get_header_image() ) { ?>			
-					<style>#masthead {background-image: url("<?php echo get_theme_mod( 'header_image' ); ?>");}</style>			
-				<?php } else { ?>
-					<style>#masthead {background-image: url("<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg");}</style>		
-				<?php } ?>					
+	
+					<?php if ( get_header_image() ) { ?>			
+						<style>#masthead {background-image: url("<?php echo get_theme_mod( 'header_image' ); ?>");}</style>			
+					<?php } else { ?>
+						<style>#masthead {background-image: url("<?php echo get_template_directory_uri(); ?>/assets/img/bg.jpg");}</style>		
+					<?php } ?>			
 						
 		</header>
+
 		
 		<?php if ( has_nav_menu( 'secondary_menu' ) ) { ?>
-			<div id="secondary-navigation" role="navigation">
-				<div class="units-row clearfix">
+			<div id="secondary-navigation" role="navigation" class="units-row units-split">
+				<div class="nav clearfix">
 					<?php weavr_secondary_nav(); ?>
 				</div>
 			</div>

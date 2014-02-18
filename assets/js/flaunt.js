@@ -22,8 +22,10 @@
 		
 		// Click to reveal the nav
 		$('.nav-mobile').click(function(){
-			$('.nav-list').toggle();
+			//$('.nav-list').toggle();
+			$(this).parent().children(".nav-list").toggle();
 		});
+		
 	
 		// Dynamic binding to on 'click'
 		$('.nav-list').on('click', '.nav-click', function(){

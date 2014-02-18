@@ -31,43 +31,8 @@ $fl_border_2: 1px solid #333;
 
 #secondary-navigation {
 	position: relative;
-	z-index: 100;
-	padding: 0 $gutter;
 	z-index: 10;
 	display: block;
-	ul {
-		list-style-type: none;
-		margin: 0;
-		border: 1px solid $fl_border_1;
-		li {			
-			a {
-				text-decoration: none;
-				padding: 10px 20px;
-				border: $fl_border_1;
-				background: $fl_bg_normal_state;
-				display: block;
-				width: 100%;
-				border-bottom: 0;
-				color: #fff;
-				&:hover, &:focus {
-					background: $fl_bg_hover_state;
-				}
-				@include breakpoint('bp2') {
-					float: left;
-					width: auto;
-				}
-			}
-			&:last-child a {
-				border-bottom: $fl_border_1;
-				@include breakpoint('bp2') {
-					border-bottom: 0;
-				}
-			}
-		}
-	}
-	.sub-menu {
-		display: none;
-	}
 }
 	
 .nav-mobile {
